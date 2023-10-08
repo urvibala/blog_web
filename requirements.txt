@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+flask-wtf
+flask-wtf-csrf
+wtforms
+Werkzeug
