@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ blog.title }}</title>
+</head>
+<body id="body-style">
+    <div class="container" id="page">
+
+        <h1 id="blog-title">{{ blog.title }}</h1> 
+        <h3>Author - {{ blog.name }}</h3>
+        {% if blog.image_path %}
+            <img id="blog-img" src="{{ url_for('static', filename='images/' + blog.image_path) }}" alt="{{ image }}"
+            style="padding-left: 0%; padding-right: 15%;">
+        {% endif %}
+        <p id="content">{{ blog.content }}</p>
+        <br>
+        <a href="#" class="share-btn btn " id="share" data-blog-id="{{ blog.id }}">Share</a>
+    </div>
+</body>
+</html>
+{% endblock %}

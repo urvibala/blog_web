@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ThoughtPalette</title>
+    </head>
+    <body id="body-style" >
+        <div class="container " style="margin-top: 60px;">
+            <div class="row">
+                <img src="{{url_for('static', filename='images/bg2.jpg') }}" class="col-4" style="padding:0">
+                <div class="col-8" style="background-color:#5C4033; color: white;">
+                    <br>
+                    <p class="container text-center bs-emphasis-color-rgb fw-semibold" id="main-text" >Discover, Express, Communicate.</p>
+                    <br>
+                    <p class = "container text-center" id="secondary-text" >At ThoughtPalette, we believe in the power of storytelling.
+                        Discover captivating blogs, share your unique voice, and be part of a community that celebrates creativity!</p>
+                </div>
+            </div>
+            <br>
+            <h3 class="text-center fs-1 fw-bold" id="read">Explore</h3>
+            <div class="fs-3 align" id="blogs-section">
+                <div class="row">
+                    {% for blog in blogs %}
+                    <div class="col-6">
+                        <div class="blog-item">
+                            {% if blog.image_path %}
+                            <img id="blog-img" src="{{ url_for('static', filename='images/' + blog.image_path) }}" alt="{{ image }}" >
+                            {% endif %}
+                            <br>
+                            <a class="link-body-emphasis link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover" id="blog-titles" href="{{url_for('view_blog', blog_id=blog.id)}}"> {{blog.title}} </a> 
+                            <br>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
+{% endblock %}

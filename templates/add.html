@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Blog</title>
+  </head>
+
+  <body>
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded" >
+      <form id="post-form" action="{{ url_for('add') }}" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }}
+        <br>
+        {{ form.name() }}
+        <br>
+        {{ form.title.label }}
+        <br>
+        {{ form.title() }}
+        <br>
+        {{ form.content.label }}
+        <br>
+        {{ form.content(class="form-control", id="floatingTextarea2", style="height:500px; width:500px;") }}
+        <br>
+        {{ form.image.label }}
+        <br>
+        {{ form.image() }}
+        <br>
+        <br>
+        {{ form.submit(class="btn btn-dark") }}
+      </form>
+    </div>
+  </body>
+</html>
+{% endblock %}

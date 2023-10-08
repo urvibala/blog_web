@@ -1,0 +1,117 @@
+/* Common styles for all screen sizes */
+body {
+    background-color: #f4f4f4;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+}
+
+#content-all {
+    padding-top: 60px;
+}
+
+#blog-titles{
+    font-size: 32px;
+    padding: 15px;
+}
+
+#content {
+    font-size: larger;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+#post-form {
+    margin-left: 15%;
+    margin-right: auto;
+}
+
+#share {
+    border-color: black;
+    margin-left: 42%;
+    margin-bottom: 5%;
+}
+
+#secondary-text {
+    font-size: x-large;
+    padding: 12%;
+}
+
+#main-text {
+    font-size: xx-large;
+    padding: 15px;
+}
+
+
+#blog-img{
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+}
+
+/* Styles for screens narrower than 768px (e.g., tablets and mobile phones) */
+@media screen and (max-width: 768px) {
+    #content {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: larger;
+    }
+
+    #blog-titles{
+        font-size: larger;
+    }
+
+    #post-form {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    #share {
+        margin-left: 38%;
+    }
+
+    #secondary-text {
+        font-size: large;
+    }
+
+    #main-text {
+        font-size: x-large;
+    }
+}
+
+/* Styles for screens narrower than 480px (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+    #content {
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: large;
+    }
+
+    #blog-titles{
+        font-size: 16px;
+        padding-left: auto;
+    }
+
+    #post-form {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #share {
+        margin-left: 33%;
+    }
+
+    #secondary-text {
+        font-size: smaller;
+        padding: 5%;
+    }
+
+    #main-text {
+        padding: 5px;
+        font-size: medium;
+    }
+}
