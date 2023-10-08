@@ -12,7 +12,7 @@ UPLOAD_FOLDER = 'static/images'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app = Flask(__name__)
-app.secret_key = 'abc'
+app.secret_key = 'your_secret_key'
 csrf = CSRFProtect(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
